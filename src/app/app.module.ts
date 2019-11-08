@@ -3,14 +3,48 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomePageComponent } from './pages/home/home-page/home-page.component';
+import { TopToolbarComponent } from './components/toolbar/top-toolbar/top-toolbar.component';
+
+// Material Design Modules
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { WordInputComponent } from './components/game-components/inputs/word-input/word-input.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+
+
+import { CorrectWordsCardComponent } from './components/game-components/display/stats/correct-words-card/correct-words-card.component';
+import {
+  IncorrectWordsCardComponent
+} from './components/game-components/display/stats/incorrect-words-card/incorrect-words-card.component';
+import { TimeElapsedCardComponent } from './components/game-components/display/stats/time-elapsed-card/time-elapsed-card.component';
+
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    TopToolbarComponent,
+    WordInputComponent,
+    CorrectWordsCardComponent,
+    IncorrectWordsCardComponent,
+    TimeElapsedCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatInputModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
