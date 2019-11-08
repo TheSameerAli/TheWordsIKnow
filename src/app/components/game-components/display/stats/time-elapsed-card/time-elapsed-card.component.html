@@ -1,6 +1,6 @@
 <mat-card class="full-width">
         <mat-card-title class="stat">
-            0:00
+            {{gameStateService.elapsedTime | date:'mm:ss'}}
         </mat-card-title>
     
         <mat-card-subtitle class="description">
