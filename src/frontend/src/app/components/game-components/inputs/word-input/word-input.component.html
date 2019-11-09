@@ -2,3 +2,4 @@
     <input (keyup.enter)="addWord()" [(ngModel)]="word" matInput placeholder="Enter a word">
     <span class="muted" matSuffix>Enter to Submit</span>
 </mat-form-field>
+<button (click)="endGame()" mat-flat-button class="half-width mb-3" color="warn">End Game</button>
