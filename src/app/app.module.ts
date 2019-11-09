@@ -22,6 +22,7 @@ import {
 } from './components/game-components/display/stats/incorrect-words-card/incorrect-words-card.component';
 import { TimeElapsedCardComponent } from './components/game-components/display/stats/time-elapsed-card/time-elapsed-card.component';
 import { FormsModule } from '@angular/forms';
+import { GameCanvasComponent } from './components/game-components/game-canvas/game-canvas.component';
 
 
 
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     WordInputComponent,
     CorrectWordsCardComponent,
     IncorrectWordsCardComponent,
-    TimeElapsedCardComponent
+    TimeElapsedCardComponent,
+    GameCanvasComponent
   ],
   imports: [
     BrowserModule,
