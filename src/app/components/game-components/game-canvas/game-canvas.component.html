@@ -1,0 +1,36 @@
+<div *ngIf="!gameStateService.started" class="game-start">
+    <div class="game-start-content">
+        <div *ngIf="!showStarting">
+            <button mat-flat-button (click)="startGame()" class="large-button" color="primary">Start</button>
+            <button mat-flat-button color="accent" class="ml-2 large-button">HOW TO PLAY</button>
+        </div>
+
+        <div *ngIf="showStarting">
+            <h3 class="timer-title">Game Starting In...</h3>
+            <h1 class="timer-number">{{startingTimer}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="gameplay">
+    <div class="word-input">
+        <app-word-input></app-word-input>
+    </div>
+
+    <div class="stats">
+        <div class="row">
+            <div class="col-md-4">
+                <app-correct-words-card></app-correct-words-card>
+            </div>
+
+            <div class="col-md-4">
+                <app-incorrect-words-card></app-incorrect-words-card>
+            </div>
+
+            <div class="col-md-4">
+                <app-time-elapsed-card></app-time-elapsed-card>
+            </div>
+        </div>
+
+    </div>
+</div>
