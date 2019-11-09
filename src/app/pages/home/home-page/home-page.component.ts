@@ -1,4 +1,6 @@
+import { GameStateService } from './../../../services/game/game-state.service';
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-home-page',
@@ -11,5 +13,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
 
 }
