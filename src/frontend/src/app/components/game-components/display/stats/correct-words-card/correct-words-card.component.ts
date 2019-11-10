@@ -1,5 +1,5 @@
 import { GameStateService } from './../../../../../services/game/game-state.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-correct-words-card',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./correct-words-card.component.scss']
 })
 export class CorrectWordsCardComponent implements OnInit {
+  @Input() value: number;
 
   constructor(public gameStateService: GameStateService) {
   }
