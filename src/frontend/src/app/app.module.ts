@@ -1,8 +1,12 @@
+import { AuthenticationService } from './services/auth/authentication.service';
+import { AngularFireAuth } from '@angular/fire/auth/auth';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +31,9 @@ import {
 import { TimeElapsedCardComponent } from './components/game-components/display/stats/time-elapsed-card/time-elapsed-card.component';
 import { FormsModule } from '@angular/forms';
 import { GameCanvasComponent } from './components/game-components/game-canvas/game-canvas.component';
+import { LoginComponent } from './auth/components/login/login.component';
+import { RegisterComponent } from './auth/components/register/register.component';
+import { UserComponent } from './auth/components/user/user.component';
 
 
 
@@ -41,7 +48,10 @@ import { GameCanvasComponent } from './components/game-components/game-canvas/ga
     CorrectWordsCardComponent,
     IncorrectWordsCardComponent,
     TimeElapsedCardComponent,
-    GameCanvasComponent
+    GameCanvasComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +64,10 @@ import { GameCanvasComponent } from './components/game-components/game-canvas/ga
     MatGridListModule,
     MatCardModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AngularFireAuth, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,9 +10,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: AngularFirestore) { }
 
   ngOnInit() {
+    // this.db.collection('users').doc('oHmKVHYSS1XgIUVGZ9y1').collection('scores').valueChanges().subscribe(data => {
+    //   console.log(data);
+    // });
   }
 
 
