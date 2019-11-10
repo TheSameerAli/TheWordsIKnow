@@ -1,5 +1,5 @@
 import { GameStateService } from './../../../../services/game/game-state.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-word-input',
@@ -7,20 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./word-input.component.scss']
 })
 export class WordInputComponent implements OnInit {
+  @Output() onEndGame: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onWordEntered: EventEmitter<string> = new EventEmitter<string>();
+
   word: string;
 
-  constructor(private gameStateService: GameStateService) { }
+  constructor(public gameStateService: GameStateService) { }
 
   ngOnInit() {
   }
 
   addWord() {
-    this.gameStateService.addWord(this.word);
+    this.onWordEntered.emit(this.word);
     this.clearInput();
   }
 
   clearInput() {
     this.word = '';
+  }
+
+  endGame() {
+    this.onEndGame.emit();
   }
 
 }
