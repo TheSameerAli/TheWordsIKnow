@@ -1,4 +1,3 @@
-import { GameStateService } from './../../../../services/game/game-state.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -12,7 +11,7 @@ export class WordInputComponent implements OnInit {
 
   word: string;
 
-  constructor(public gameStateService: GameStateService) { }
+  constructor() { }
 
   ngOnInit() {
   }

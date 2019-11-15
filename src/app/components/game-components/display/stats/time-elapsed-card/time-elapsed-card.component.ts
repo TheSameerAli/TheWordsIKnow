@@ -1,4 +1,3 @@
-import { GameStateService } from './../../../../../services/game/game-state.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TimeElapsedCardComponent implements OnInit {
   @Input() timeElapsed: Date;
-  constructor(public gameStateService: GameStateService) {
+  constructor() {
   }
 
   ngOnInit() {

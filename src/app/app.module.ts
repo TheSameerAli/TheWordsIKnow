@@ -60,3 +60,4 @@ import { GameCanvasComponent } from './components/game-components/game-canvas/ga
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
