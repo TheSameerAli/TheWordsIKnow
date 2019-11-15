@@ -11,5 +11,3 @@ node_modules/
 .idea
 bin/
 obj/
-environment.ts
-src/frontend/src/environments/environment.ts
