@@ -1,4 +1,4 @@
-import { GameStateService } from './../../../services/game/game-state.service';
+import { WordVerifyService } from './../../../services/word/word-verify.service';
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
@@ -23,7 +23,7 @@ export class GameCanvasComponent implements OnInit {
   public gameStartingInterval$: Subscription;
 
 
-  constructor(public gameStateService: GameStateService) {
+  constructor(private wordVerifyService: WordVerifyService) {
     this.correctWordCount = 0;
     this.incorrectWordCount = 0;
     this.started = false;
@@ -71,7 +71,7 @@ export class GameCanvasComponent implements OnInit {
     if (!word || word === '') {
       return;
     }
-    if (this.isValidWord(word)) {
+    if (this.wordVerifyService.isValidWord(word, this.wordsAdded)) {
       this.wordsAdded.push(word);
       this.correctWordCount++;
     } else {
@@ -79,11 +79,5 @@ export class GameCanvasComponent implements OnInit {
     }
   }
 
-  private isValidWord(word: string) {
-    if (this.wordsAdded.includes(word)) {
-      return false;
-    }
-    return true;
-  }
 
 }
