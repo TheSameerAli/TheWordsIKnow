@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-
+declare var require: any;
 @Injectable({
   providedIn: 'root'
 })
+
 export class WordVerifyService {
   public englishWords;
 
