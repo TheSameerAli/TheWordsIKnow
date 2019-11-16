@@ -1,27 +1,28 @@
-# Frontend
+# All the Words I Know Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
+Live at: thewordsiknow.sameerali941.now.sh
 
-## Development server
+## Overview
+A simple word game to test your English vocabulary!
+The rules are simple:
+ - Enter as many english words you know
+ - Do not repeat the same word twice
+ - Get as many words out in the least possible time
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+_This project is based on https://github.com/open-source-ideas/open-source-ideas/issues/204_ pitched by @xenotropic. The idea is based on the a facebook post by author-editor Nathan J. Robinson which states:
+> In order to relax I am writing a document called All The Words I Know (In The Order I Think Of Them), in which I try to list every word I know . . . It gets harder and harder as you go on of course and realize that you've already used lots of words. I realize this may be a strange way to unwind but people do sudoku and stuff and this doesn't feel much different to me . . . . it gets harder and harder to find ones you haven't used . . . . i bet one could write a simple program that would turn duplicates red or something if one knew how to do such things.
 
-## Code scaffolding
+## Setup Locally
+This project is built on [Angular](https://angular.io/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To contribute or set this up on your local environment, follow the steps below:
+ 
+ `$ git clone git@github.com:TheSameerAli/TheWordsIKnow.git`
 
-## Build
+`$ cd TheWordsIKnow`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`$ npm install`
 
-## Running unit tests
+`$ ng serve `
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If the steps above do not work, make sure you have `ng` cli tool install on your system. Follow this [guide](https://angular.io/cli) to install Angular Cli.
