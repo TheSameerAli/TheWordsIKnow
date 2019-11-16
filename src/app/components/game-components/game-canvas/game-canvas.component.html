@@ -31,26 +31,49 @@
         </div>
     </ng-container>
 </div>
-
-<div class="gameplay">
-    <div class="word-input">
-        <app-word-input (onWordEntered)="addWord($event)" (onEndGame)="endGame()"></app-word-input>
-    </div>
-
-    <div class="stats">
-        <div class="row">
-            <div class="col-md-4">
-                <app-correct-words-card [value]="correctWordCount"></app-correct-words-card>
+<div class="row">
+    <div class="col-md-9">
+        <div class="gameplay">
+            <div class="word-input">
+                <app-word-input (onWordEntered)="addWord($event)" (onEndGame)="endGame()"></app-word-input>
             </div>
 
-            <div class="col-md-4">
-                <app-incorrect-words-card [value]="incorrectWordCount"></app-incorrect-words-card>
-            </div>
+            <div class="stats">
+                <div class="row">
+                    <div class="col-md-4">
+                        <app-correct-words-card [value]="correctWordCount"></app-correct-words-card>
+                    </div>
 
-            <div class="col-md-4">
-                <app-time-elapsed-card [timeElapsed]="timeElapsed"></app-time-elapsed-card>
+                    <div class="col-md-4">
+                        <app-incorrect-words-card [value]="incorrectWordCount"></app-incorrect-words-card>
+                    </div>
+
+                    <div class="col-md-4">
+                        <app-time-elapsed-card [timeElapsed]="timeElapsed"></app-time-elapsed-card>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
 
+    <div class="col-md-3">
+        <mat-card class="height-100">
+            <mat-card-title>
+                Words Entered
+            </mat-card-title>
+
+            <mat-card-subtitle>
+                Correct words you've entered
+            </mat-card-subtitle>
+
+            <mat-card-content>
+                <div class="word-collection">
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let word of wordsAdded">{{word}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
