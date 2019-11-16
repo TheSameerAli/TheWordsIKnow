@@ -1,6 +1,6 @@
 # All the Words I Know Game
 
-Live at: [thewordsiknow.sameerali941.now.sh](thewordsiknow.sameerali941.now.sh)
+Live at: [https://thewordsiknow.sameerali941.now.sh](thewordsiknow.sameerali941.now.sh)
 
 ## Overview
 A simple word game to test your English vocabulary!
