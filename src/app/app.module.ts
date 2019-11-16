@@ -18,6 +18,8 @@ import { WordInputComponent } from './components/game-components/inputs/word-inp
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
+
 
 
 import { CorrectWordsCardComponent } from './components/game-components/display/stats/correct-words-card/correct-words-card.component';
@@ -53,6 +55,7 @@ import { GameCanvasComponent } from './components/game-components/game-canvas/ga
     MatInputModule,
     MatGridListModule,
     MatCardModule,
+    MatChipsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
